@@ -14,7 +14,7 @@ import static org.hamcrest.core.Is.is;
  */
 public abstract class FruitServiceCommon implements FruitServiceTest{
 
-    static FruitService fruitService;
+    protected static FruitService fruitService;
 
     @Test
     public void giveMeSomeFruit() {

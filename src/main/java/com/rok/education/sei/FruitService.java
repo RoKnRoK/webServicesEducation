@@ -1,6 +1,7 @@
 package com.rok.education.sei;
 
 import javax.jws.WebMethod;
+import javax.jws.WebParam;
 import javax.jws.WebResult;
 import javax.jws.WebService;
 import javax.jws.soap.SOAPBinding;
@@ -10,7 +11,7 @@ import javax.jws.soap.SOAPBinding;
  * All rights reserved =D
  */
 @WebService
-@SOAPBinding(style=SOAPBinding.Style.RPC)
+@SOAPBinding(style=SOAPBinding.Style.DOCUMENT)
 public interface FruitService {
     @WebMethod
     @WebResult(partName = "some_fruit")
@@ -18,5 +19,5 @@ public interface FruitService {
 
     @WebMethod
     @WebResult(partName = "the_fruit")
-    public String giveMeFruit(String fruitName);
+    public String giveMeFruit(@WebParam String fruitName);
 }

@@ -1,5 +1,6 @@
-package com.rok.education;
+package com.rok.education.soap;
 
+import com.rok.education.FruitServiceCommon;
 import com.rok.education.model.Fruit;
 import com.rok.education.sei.FruitService;
 import com.rok.education.sib.FruitServiceImpl;

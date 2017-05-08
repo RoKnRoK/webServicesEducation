@@ -13,6 +13,9 @@ public enum Fruit {
      * All rights reserved =D
      */
     public static Fruit fromString(String fruitName) throws NoSuchFruitException {
+        if (fruitName == null) {
+            throw new NoSuchFruitException("No fruit name provided");
+        }
         for (Fruit fruit : values()) {
             if (Objects.equals(fruit.toString().toLowerCase(), fruitName.toLowerCase())){
                 return fruit;
